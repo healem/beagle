@@ -1,0 +1,11 @@
+[Unit]
+Description=Sauri Service
+Requires=1wire.service
+After=firstboot.service 1wire.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/python /usr/local/lib/python2.7/dist-packages/sauri/collector.py -c /etc/sauri/home.yaml
+
+[Install]
+WantedBy=multi-user.target

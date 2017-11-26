@@ -1,0 +1,10 @@
+[Unit]
+Description=Run firstboot scripts is required
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -ec "/root/firstboot/firstboot.sh"
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Make 1Wire devices available
+After=firstboot.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -ec "/bin/echo 'BB-1WIRE-P9-22' > /sys/devices/bone_capemgr.9/slots"
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

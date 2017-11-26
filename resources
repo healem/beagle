@@ -1,0 +1,4 @@
+First, download and build per instructions below with $HOME=~/projects/automation/beagle:
+http://eewiki.net/display/linuxonarm/BeagleBone+Black
+
+Then run ./build.sh
